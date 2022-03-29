@@ -3,10 +3,6 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import { 
-  AiOutlineInstagram,
-  AiOutlineGithub,
-  AiOutlineLinkedin, 
-  AiOutlineFacebook,
   AiOutlineCaretDown,
   AiOutlineCaretUp,
 } from "react-icons/ai";
@@ -14,7 +10,8 @@ import {
 import { 
   SiReact
 } from "react-icons/si";
-import { Content,Title,CardsList,Card,SocialMedias, Container} from './styles';
+import { Content,Title,CardsList,Card, Container} from './styles';
+import SocialMedia from '../../components/SocialMedia';
 
 
 function Portifolio() {
@@ -35,7 +32,7 @@ function Portifolio() {
       <CardsList>
         <li>
           <Link to={""}>
-             <Card>
+             <Card id='teste'>
                <h1>GrupoJomp</h1>
                <p>Site empresarial</p>
                <span>
@@ -101,29 +98,8 @@ function Portifolio() {
         </li>
       </CardsList>
     </Content>
-    <SocialMedias>
-          <li className='github'>
-            <a href="https://github.com/DevClaudioFilho" >
-              <AiOutlineGithub/>
-            </a>
-          </li>
-          <li className='linkedin'>
-            <a href="https://github.com/DevClaudioFilho" >
-              <AiOutlineLinkedin/>
-            </a>
-          </li>
-          <li className='instagram'>
-            <a href="https://github.com/DevClaudioFilho" >
-              <AiOutlineInstagram/>
-            </a>
-          </li>
-          <li className='facebook'>
-            <a href="https://github.com/DevClaudioFilho" >
-              <AiOutlineFacebook/>
-            </a>
-          </li>
-    </SocialMedias>
-    <Link to={"/portifolio"} className="NextPage">
+    <SocialMedia/>
+    <Link to={"/contato"} className="NextPage">
       <AiOutlineCaretDown/>
     </Link>
     </Container>

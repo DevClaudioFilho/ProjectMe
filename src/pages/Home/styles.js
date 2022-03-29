@@ -34,17 +34,97 @@ export const About = styled.div`
   width: 100%;
   max-width:800px;
 
-  h1{
-    font-size: 5rem;
-  }
-  p{
-    margin-top:15px;
-    font-size: 1.2rem;
-  }
+`;
+
+export const Typing=styled.p`
+  position: relative;
+  padding: 0 3px;
+  margin-top:15px;
+  font-size: 1.2rem;
   strong{
     font-weight:bold;
   }
+  ::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    background: #312E38;
+    animation: typing 2s steps(40) forwards,
+      caret 1s infinite;
+    animation-delay:${props => props.delay||20};
+  }
+  // Animation
+  @keyframes typing {
+    0%{
+      content: "|";
+      width: 100%;
+    }
+    99%{
+      content: "|";
+    }
+    100%{
+      content: "";
+      width: 0;
+    }
+  }
+  @keyframes caret {
+    0%{color: white;}
+    50% { color: transparent }
+    100%{ color: white;}
+  }
 `;
+
+export const TypingTitle=styled.h1.attrs(props => ({ 
+    delay: props.delay||0,
+ }))`
+  position: relative;
+  padding: 0 3px;
+  margin-top:15px;
+  font-size: 5rem;
+  strong{
+    font-weight:bold;
+  }
+  ::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    color: transparent;
+    background: #312E38;
+    animation: typing 2s steps(40) forwards,
+      caret 1s infinite;
+    animation-delay:delay;
+  }
+
+  strong [${props => props.last}="true"] {
+    background-color: red;
+    height: 10px;
+    width:70px;
+  }
+  // Animation
+  @keyframes typing {
+    0%{
+      content: "|";
+      width: 100%;
+    }
+    99%{
+      content: "|";
+    }
+    100%{
+      content: "";
+      width: 0;
+    }
+  }
+  @keyframes caret {
+    0%{color: white;}
+    50% { color: transparent }
+    100%{ color: white;}
+  }
+`
 
 export const SocialMedias = styled.ul`
   position: fixed;
