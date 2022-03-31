@@ -1,0 +1,27 @@
+{
+    "data":{
+        "project": [
+            {
+                "id": 1,
+                "title": "PokeType",
+                "type": "Fun",
+                "techs":["ReactJS","Typescript","Styledcomponents"],
+                "gif": "https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true"
+            },
+            {
+                "id": 2,
+                "title": "GrupoJomp",
+                "type": "Enterprice",
+                "techs":["NextJS","javascript","sass"],
+                "gif": "https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true"
+            },
+            {
+                "id": 3,
+                "title": "GrupoJomp",
+                "type": "Enterprice",
+                "techs":["NextJS","javascript","sass"],
+                "gif": ""
+            }
+        ]
+    }
+}

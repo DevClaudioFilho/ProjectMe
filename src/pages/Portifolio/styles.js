@@ -30,14 +30,6 @@ export const Container = styled.div`
       right: calc(50% - 35px);
     }
   }
-
-  h1.pageTitle{
-    font-size: 4rem;
-  }
-  p{
-    margin-top:15px;
-    font-size: 1.2rem;
-  }
 `;
 
 export const Content = styled.div`
@@ -71,20 +63,7 @@ export const CardsList = styled.ul`
     background: #551a8b; 
     border-radius: 10px;
   }
-  li{
-    width: 320px;
-    height: 220px;
-    
-    background-image: url("https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true");
 
-    animation: mymove 1s infinite;
-
-    @keyframes mymove {
-      from { background-color: rgba(0,0,0,0.3);}
-      to {background-color: rgba(0,0,0,0.2);}
-    }
-    
-  }
   @media (max-width: 1040px) {
     grid-template-columns: repeat(2, 1fr);
     
@@ -106,33 +85,49 @@ export const CardsList = styled.ul`
   }
 `;
 
-export const Card= styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const Card= styled.li`
+  width: 320px;
+  height: 220px;
+    
+  background-image:${(props) => `url(${props.BgImg})`};
 
-  opacity: 0;
-  transition: opacity 0.5s;
+  animation: mymove 1s infinite;
 
-  width: 100%;
-  height: 100%;
-
-  color: whitesmoke;
-  
-  h1{
-    font-size: 2rem;
-  }
-  p{
-    font-size: 1rem;
-    margin-top: 5px;
-  }
-  span{
-     margin-top: 15px;
+  @keyframes mymove {
+    from { background-color: rgba(0,0,0,0.3);}
+    to {background-color: rgba(0,0,0,0.2);}
   }
 
-  &:hover{
-    opacity: 1;
-    background: rgba(0,0,0,0.60);
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    width: 100%;
+    height: 100%;
+
+    color: whitesmoke;
+    
+    h1{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+    span{
+      margin-top: 15px;
+      svg+svg{
+        margin-left: 5px;
+      }
+    }
+    &:hover{
+      opacity: 1;
+      background: rgba(0,0,0,0.60);
+    }
   }
 `

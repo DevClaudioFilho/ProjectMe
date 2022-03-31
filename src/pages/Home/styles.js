@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +35,6 @@ export const About = styled.div`
 
   width: 100%;
   max-width:800px;
-
 `;
 
 export const Typing=styled.p`
