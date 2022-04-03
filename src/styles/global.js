@@ -14,10 +14,10 @@ export default createGlobalStyle`
   }
   input, button{
     font-family:'Roboto Slab', serif;
-    font-size:16px;
+    font-size:1rem;
   }
   h1,h2,h3,h4,h5,h6, strong{
-    font-weight:500
+    font-weight:bold;
   }
   button{
     cursor:pointer;

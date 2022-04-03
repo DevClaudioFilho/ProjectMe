@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 0 80px;
 
   a.NextPage,a.PrevPage{
     width:70px;
@@ -30,109 +30,82 @@ export const Container = styled.div`
       right: calc(50% - 35px);
     }
   }
-
-  h1.pageTitle{
-    font-size: 4rem;
-  }
-  p{
-    margin-top:15px;
-    font-size: 1.2rem;
-  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   max-width: 1015px;
+  width: 100%;
   height: 65%;
 `;
 
 export const Title =styled.div`
-  margin-bottom: 60px;
-  max-width: 100%;
+  margin-bottom: 40px;
+  width: 100%;
   p{
     margin-top: 5px;
   }
 `;
 
-export const CardsList = styled.ul`
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding-right: 10px;
-
-  overflow: auto;
-  ::-webkit-scrollbar {
-  width: 5px;
-  } 
-  ::-webkit-scrollbar-thumb {
-    background: #551a8b; 
-    border-radius: 10px;
-  }
-  li{
-    width: 320px;
-    height: 220px;
-    
-    background-image: url("https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true");
-
-    animation: mymove 1s infinite;
-
-    @keyframes mymove {
-      from { background-color: rgba(0,0,0,0.3);}
-      to {background-color: rgba(0,0,0,0.2);}
-    }
-    
-  }
-  @media (max-width: 1040px) {
-    grid-template-columns: repeat(2, 1fr);
-    
-    li{
-      justify-self: end
-    }
-    li:nth-child(2n){
-      justify-self: start
-    }
-  }
-  @media (max-width: 690px) {
-    grid-template-columns: repeat(1, 1fr);
-    li{
-      justify-self: center
-    }
-    li:nth-child(2n){
-      justify-self: center
-    }
-  }
-`;
-
-export const Card= styled.div`
+export const ContatosContainer = styled.section`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+`;
 
-  opacity: 0;
-  transition: opacity 0.5s;
-
+export const EmailForm = styled.form`
+  display: flex;
+  max-width: 500px;
   width: 100%;
+  max-height: 400px;
   height: 100%;
-
-  color: whitesmoke;
-  
-  h1{
-    font-size: 2rem;
+  flex-direction: column;
+  input,textarea{
+    background-color: transparent;
+    border: solid 2px #FFF;
+    border-radius: 4px;
+    padding: 8px;
+    color: #fff;
+    :focus, :hover{
+      border: solid 2px #551a8b;
+    }
+    ::placeholder{
+      color: #fff;
+    }
   }
-  p{
-    font-size: 1rem;
-    margin-top: 5px;
+  div{
+    margin-bottom: 5px;
+    display: flex;
+    input{
+      max-width: 49.7%;
+    }
+    input+input{
+      margin-left: auto;
+    }
   }
-  span{
-     margin-top: 15px;
+  textarea{
+    margin-bottom: 5px;
+    height: 200px;
+    max-width: 600px;
+    width: 100%;
+    resize: none;
   }
-
-  &:hover{
-    opacity: 1;
-    background: rgba(0,0,0,0.60);
+  button{
+    margin: 10px auto;
+    padding:10px 30px;
+    background-color: #551a8b;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    transition: all 0.8s;
+    &:hover{
+      border: 1px solid #fff;
+    }
   }
-`
+  h2{
+    margin-bottom: 25px;
+  }
+`;

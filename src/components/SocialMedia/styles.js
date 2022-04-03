@@ -2,8 +2,11 @@ import styled from 'styled-components';
 // import { shade } from 'polished';
 
 export const SocialMedias = styled.ul`
+display: flex;
 position: fixed;
-left: 0;
+z-index: 50;
+right: 0;
+top: 0;
 top:calc(50%-60*4);
 .github{
     background-color: #5b5959;
@@ -19,12 +22,12 @@ top:calc(50%-60*4);
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 li{
-  width: 60px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: right;
-  transition: width 1s;
+  justify-content: center;
+  transition: height 1s;
 
   svg{
     width: 30px;
@@ -34,7 +37,7 @@ li{
     margin: 0 15px;
   }
   :hover{
-    width: 80px;
+    height: 55px;
   }
 }
 `;

@@ -7,10 +7,10 @@ import RoutesComponent from './routes';
 
 const App= () =>(
   <>
+    <GloblalStyle />
     <Router>
       <RoutesComponent/>
     </Router>
-    <GloblalStyle />
   </>
 )
 

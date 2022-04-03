@@ -1,25 +1,18 @@
 import React, { useState,useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import { 
-  AiOutlineCaretDown,
-  AiOutlineCaretUp,
-} from "react-icons/ai";
+
 
 import { 
   SiReact,SiTypescript,SiStyledcomponents,SiNextdotjs,SiSass,SiJavascript
 } from "react-icons/si";
-import { Content,Title,CardsList,Card, Container} from './styles';
-import SocialMedia from '../../components/SocialMedia';
-
-
+import {Title,CardsList,Card, Container} from './styles';
 function Portifolio() {
   const [projects,setProject] = useState([])
 
   useEffect(() => {
     async function loadProjects() {
-      const getProject = await require('../../service/fakedb.json');
+      const getProject = await require('../../../../service/fakedb.json');
 
       setProject(getProject.data.project);
 
@@ -41,15 +34,7 @@ function Portifolio() {
   }
 
   return(
-  <>
-    <Helmet>
-      <title>Claudio Filho | Guides</title>
-    </Helmet>
-    <Container>
-    <Link to={"/"} className="PrevPage">
-          <AiOutlineCaretUp/>
-    </Link>
-    <Content>
+  <Container>
       <Title>
         <h1>Portifolio</h1>
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
@@ -69,13 +54,7 @@ function Portifolio() {
           </Card>
         ))}
       </CardsList>
-    </Content>
-    <SocialMedia/>
-    <Link to={"/contato"} className="NextPage">
-      <AiOutlineCaretDown/>
-    </Link>
     </Container>
-  </>
   );
 }
 

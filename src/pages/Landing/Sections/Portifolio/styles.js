@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 // import { shade } from 'polished';
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,15 +33,8 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1015px;
-  height: 65%;
-`;
-
 export const Title =styled.div`
+  align-self: flex-start;
   margin-bottom: 60px;
   max-width: 100%;
   p{
@@ -86,7 +80,8 @@ export const CardsList = styled.ul`
 `;
 
 export const Card= styled.li`
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   height: 220px;
     
   background-image:${(props) => `url(${props.BgImg})`};

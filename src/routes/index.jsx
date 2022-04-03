@@ -4,14 +4,12 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from '../pages/Home';
-import Portifolio from '../pages/Portifolio';
 import Contato from '../pages/Contato';
+import Landing from '../pages/Landing';
 
 const RoutesComponent= () => (
   <Routes>
-    <Route path="/" element={<Home />}/>
-    <Route path="/portifolio" element={<Portifolio />}/>
+    <Route path="/" element={<Landing />}/>
     <Route path="/contato" element={<Contato />}/>
   </Routes>
 );
