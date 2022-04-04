@@ -27,13 +27,29 @@ export const Container = styled.div`
 
   section{
     z-index: 1;
-    height: 100vh;
+    height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-bottom: 3px solid #c8c8c8;
-    padding: 60px 0;
+    padding: 60px 0 ;
+    position: relative;
+    ::after{
+      content: "";
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #c8c8c8;
+      bottom: -20px;
+    }
   }
-
+  section:last-of-type{
+    border-bottom: none;
+    ::after{
+      display: none;
+    }
+  }
 `;

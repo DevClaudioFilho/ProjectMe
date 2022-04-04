@@ -1,56 +1,43 @@
 import styled from 'styled-components';
 // import { shade } from 'polished';
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 80px;
-
-  a.NextPage,a.PrevPage{
-    width:70px;
-    height: 70px;
-    svg{
-      width: 100%;
-      height: 100%;
-    }
-    :hover{
-      zoom: 1.05;
-    }
-    &.NextPage{
-      position: fixed;
-      bottom: 0;
-      right: calc(50% - 35px);
-    }
-    &.PrevPage{
-      position: fixed;
-      top: 0;
-      right: calc(50% - 35px);
-    }
-  }
+  padding: 0 15px;
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1015px;
-  width: 100%;
-  height: 65%;
-`;
 
 export const Title =styled.div`
-  margin-bottom: 40px;
-  width: 100%;
+  align-self: flex-start;
+  margin-bottom: 60px;
+  max-width: 100%;
+  h1{
+    font-size:1.8rem;
+  }
   p{
+    font-size: 1rem;
     margin-top: 5px;
   }
+  @media only screen and (min-width: 800px) {
+    h1{
+      font-size: 2.7rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+
 `;
 
-export const ContatosContainer = styled.section`
+
+export const ContatosContainer = styled.div`
   display: flex;
-  width: auto;
+  width: 100%;
   height: auto;
   flex-direction: row;
 `;

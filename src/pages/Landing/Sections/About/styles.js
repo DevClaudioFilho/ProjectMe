@@ -4,11 +4,12 @@ import styled from 'styled-components';
 export const Container = styled.section`
   z-index: 1;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #c8c8c8;
+  
 
   @media screen and (min-width: 800px) {
     h1{

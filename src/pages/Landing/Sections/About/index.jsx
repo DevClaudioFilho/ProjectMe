@@ -8,9 +8,8 @@ import TypingEfect from '../../../../components/TypingEfect';
 
 
 function About() {
-
   return(
-        <Container>
+        <Container >
           <TypingEfect lineHeight="2.1rem" maxLineHeight="5" bgColor="#312E38" title>
             Welcome to my World
           </TypingEfect>

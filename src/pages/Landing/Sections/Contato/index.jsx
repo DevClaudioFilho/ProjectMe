@@ -1,35 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 
 import { 
-  AiOutlineCaretUp,
-  AiFillPhone,
-  AiOutlineWhatsApp
-} from "react-icons/ai";
-
-import { 
-  Content,
   Title,
   Container,
   EmailForm,
   ContatosContainer,
-  InfoContainer
 } from './styles';
-import SocialMedia from '../../components/SocialMedia';
 
 
 function Contatos() {
   return(
-  <>
-    <Helmet>
-      <title>Claudio Filho | Guides</title>
-    </Helmet>
     <Container>
-    <Link to={"/portifolio"} className="PrevPage">
-          <AiOutlineCaretUp/>
-    </Link>
-    <Content>
       <Title>
         <h1>Contatos</h1>
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
@@ -74,10 +55,7 @@ function Contatos() {
         </EmailForm>
       </ContatosContainer>
 
-    </Content>
-    <SocialMedia/>
     </Container>
-  </>
   );
 }
 
