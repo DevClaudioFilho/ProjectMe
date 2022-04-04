@@ -32,13 +32,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-bottom: 1px solid #c8c8c8;
+    border-bottom: 3px solid #c8c8c8;
     padding: 60px 0;
   }
-  h1{
-    margin-bottom: 20px;
-  }
-  p{
-    line-height: 1.2rem;
-  }
+
 `;

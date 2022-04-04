@@ -16,23 +16,21 @@ function Portifolio() {
 
       setProject(getProject.data.project);
 
-      console.log(projects);
     }
     loadProjects();
   },[]);
 
   function findImg(name) {
     name=name.toLowerCase()
-    if(name.includes("React".toLowerCase()))return <SiReact size={"20px"}/>
-    if(name.includes("Next".toLowerCase()))return <SiNextdotjs size={"20px"}/>
+    if(name.includes("React".toLowerCase()))return <SiReact size={"20px"} key={name}/>
+    if(name.includes("Next".toLowerCase()))return <SiNextdotjs size={"20px"} key={name}/>
 
-    if(name.includes("Typescript".toLowerCase()))return <SiTypescript size={"20px"}/>
-    if(name.includes("javascript".toLowerCase()))return <SiJavascript size={"20px"}/>
+    if(name.includes("Typescript".toLowerCase()))return <SiTypescript size={"20px"} key={name}/>
+    if(name.includes("javascript".toLowerCase()))return <SiJavascript size={"20px"} key={name}/>
 
-    if(name.includes("Styledcomponent".toLowerCase()))return <SiStyledcomponents size={"20px"}/>
-    if(name.includes("sass".toLowerCase()))return <SiSass size={"20px"}/>
+    if(name.includes("Styledcomponent".toLowerCase()))return <SiStyledcomponents size={"20px"} key={name}/>
+    if(name.includes("sass".toLowerCase()))return <SiSass size={"20px"} key={name}/>
   }
-
   return(
   <Container>
       <Title>
@@ -41,9 +39,9 @@ function Portifolio() {
       </Title>
       <CardsList>
         {projects.map((project)=>(
-          <Card key={project.id} BgImg={project.gif}>
+          <Card BgImg={project.gif} key={project.id} >
             <Link to={""}>
-                <div id='teste'>
+                <div>
                   <h1>{project.title}</h1>
                   <p>{project.type}</p>
                   <span>
