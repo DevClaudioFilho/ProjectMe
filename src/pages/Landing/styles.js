@@ -27,7 +27,7 @@ export const Container = styled.div`
 
   section{
     z-index: 1;
-    height: 97vh;
+    height: calc(100vh - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,10 +46,18 @@ export const Container = styled.div`
       bottom: -20px;
     }
   }
+
   section:last-of-type{
     border-bottom: none;
     ::after{
       display: none;
     }
   }
+
+  @media only screen and (max-width: 500px){
+    section{
+      height: calc(95vh - 20px);
+    }
+  }
+
 `;

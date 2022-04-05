@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
 import { 
   Title,
@@ -7,8 +7,18 @@ import {
   ContatosContainer,
 } from './styles';
 
+import { 
+  AiOutlineWhatsApp,
+  AiOutlineMail
+} from "react-icons/ai";
+
+
 
 function Contatos() {
+  const [modalIsOpen,setModalIsOpen] = useState(false);
+  useEffect(() => {
+   console.log(modalIsOpen)
+  },[modalIsOpen]);
   return(
     <Container>
       <Title>
@@ -16,11 +26,30 @@ function Contatos() {
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
       </Title>
       <ContatosContainer>
-        <EmailForm
-          action=""
-          method="POST"
-          id="sendEmail"
-        >
+        <ul>
+          <li className='whatsapp'>
+            <a href="https://github.com/DevClaudioFilho" target={'_blank'} rel="noreferrer">
+              <AiOutlineWhatsApp/>
+            </a>
+          </li>
+          <li className='mail'>
+            <button onClick={()=>setModalIsOpen(!modalIsOpen)}>
+              <AiOutlineMail/>
+            </button>
+          </li>
+          <li className='whatsapp'>
+            <a href="https://github.com/DevClaudioFilho" target={'_blank'} rel="noreferrer">
+              <AiOutlineWhatsApp/>
+            </a>
+          </li>
+        </ul>
+        {modalIsOpen?
+        (
+          <EmailForm
+            action=""
+            method="POST"
+            id="sendEmail"
+          >
             <h2>Email
             </h2>
             <div>
@@ -52,7 +81,9 @@ function Contatos() {
             <button type="submit" name="BTEnvia" value="Enviar" text="Enviar" >
               Enviar
             </button>
-        </EmailForm>
+          </EmailForm>
+        ):null}
+        
       </ContatosContainer>
 
     </Container>
