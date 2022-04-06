@@ -29,8 +29,7 @@ export const Container = styled.div`
     border-bottom: 3px solid #c8c8c8;
     padding: 40px 0 ;
     position: relative;
-
-    
+    max-height: ${(props)=>props.y};
     border-bottom: 3px solid #c8c8c8;
     padding: 40px 0 ;
     position: relative;

@@ -11,7 +11,7 @@ function Home() {
   
   return(
     <> 
-      <Container>
+      <Container y={window.innerHeight}>
         <SocialMedia/>
         <About/>
         <Portifolio/>
