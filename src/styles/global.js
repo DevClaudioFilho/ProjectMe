@@ -7,6 +7,11 @@ export default createGlobalStyle`
     box-sizing:border-box;
     outline:0;
   }
+  html{
+    min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    min-height: fill-available;
+  }
   body {
     background:#312E38;
     color:#FFF;

@@ -53,11 +53,4 @@ export const Container = styled.div`
       display: none;
     }
   }
-
-  @media only screen and (max-width: 500px){
-    section{
-      height: calc(95vh - 20px);
-    }
-  }
-
 `;
