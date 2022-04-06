@@ -17,10 +17,13 @@ import {
 function Contatos() {
   const [modalIsOpen,setModalIsOpen] = useState(false);
   useEffect(() => {
-   console.log(modalIsOpen)
+    if(modalIsOpen===true){
+      console.log("ff")
+      window.scrollTo(0, document.body.scrollHeight)
+    }
   },[modalIsOpen]);
   return(
-    <Container>
+    <Container id='teste'>
       <Title>
         <h1>Contatos</h1>
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>

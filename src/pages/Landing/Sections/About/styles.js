@@ -2,13 +2,13 @@ import styled from 'styled-components';
 // import { shade } from 'polished';
 
 export const Container = styled.section`
-  z-index: 1;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    z-index: 1;
+    height: calc(100vh - 20px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   
 
   @media screen and (min-width: 800px) {

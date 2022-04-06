@@ -2,13 +2,14 @@ import styled from 'styled-components';
 // import { shade } from 'polished';
 
 export const Container = styled.section`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 15px;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 `;
 
 export const Title =styled.div`

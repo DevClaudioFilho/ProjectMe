@@ -2,13 +2,13 @@ import styled from 'styled-components';
 // import { shade } from 'polished';
 
 export const Container = styled.section`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 15px;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 `;
 
 
@@ -38,7 +38,6 @@ export const Title =styled.div`
 export const ContatosContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 80%;
   flex-direction: column;
 
   ul{

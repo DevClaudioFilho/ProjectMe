@@ -26,14 +26,13 @@ export const Container = styled.div`
   }
 
   section{
-    z-index: 1;
-    height: calc(100vh - 20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border-bottom: 3px solid #c8c8c8;
-    padding: 60px 0 ;
+    padding: 40px 0 ;
+    position: relative;
+
+    
+    border-bottom: 3px solid #c8c8c8;
+    padding: 40px 0 ;
     position: relative;
     ::after{
       content: "";
@@ -46,7 +45,6 @@ export const Container = styled.div`
       bottom: -20px;
     }
   }
-
   section:last-of-type{
     border-bottom: none;
     ::after{
