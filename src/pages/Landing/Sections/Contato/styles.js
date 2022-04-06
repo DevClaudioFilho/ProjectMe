@@ -99,11 +99,11 @@ export const ContatosContainer = styled.div`
         justify-content: center;
         align-items:center;
       
-        height: 40%;
-        width: auto;
+        height: 30%;
+        width: 100px;
        
         position: absolute;
-        right: -165%;
+        bottom: -55%;
         
         font-size: 0.8rem;
         
@@ -112,7 +112,15 @@ export const ContatosContainer = styled.div`
         padding: 10px;
         opacity:0;
         transition: opacity 0.4s;
+
       }
+      @media screen and (min-width: 700px) {
+          :after{
+            right: -165%;
+            bottom: 15%;
+            width: auto;
+          }
+        }
     }
 
   }
@@ -199,4 +207,5 @@ export const EmailForm = styled.form`
       width: 60%;
       padding: 10px 50px;
   }
+
 `;
