@@ -8,7 +8,7 @@ import Contatos from './Sections/Contato';
 
 
 function Home() {
-  const [size,setSize] = useState()
+  const [size,setSize] = useState(window.innerHeight)
 
   useEffect(() => {
     async function loadsize() {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 import { Container} from './styles';
@@ -16,7 +15,7 @@ function About() {
           </TypingEfect>
           <TypingEfect lineHeight="1.3rem" bgColor="#312E38"  delay="2.5s">
             I am <strong last="true">Claudio Filho</strong>, I am full-stack web developer and UI/UX javascript specialist.<br/>
-            Check my socials medias and take one view on my <Link to={"/portifolio"}>portifolio page</Link>.
+            Check my socials medias and take one view on my <a href="#portifolio">portifolio page</a>.
           </TypingEfect>
         </div>
       </Container>

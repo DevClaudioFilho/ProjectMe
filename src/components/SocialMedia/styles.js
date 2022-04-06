@@ -29,13 +29,21 @@ li{
   justify-content: center;
   transition: height 1s;
 
-  svg{
-    width: 30px;
-    height: 30px;
+  a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
 
-    color: white;
-    margin: 0 15px;
+      color: white;
+    }
   }
+
   :hover{
     height: 55px;
   }

@@ -6,7 +6,8 @@
                 "title": "PokeType",
                 "type": "Fun",
                 "techs":["ReactJS","Typescript","Styledcomponents"],
-                "gif": "https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true"
+                "gif": "https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true",
+                "link":"https://musing-jepsen-8e6508.netlify.app"
             },
             {
                 "id": 2,

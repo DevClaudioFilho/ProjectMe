@@ -32,7 +32,7 @@ function Portifolio() {
     if(name.includes("sass".toLowerCase()))return <SiSass size={"20px"} key={name}/>
   }
   return(
-  <Container>
+  <Container id='portifolio'>
       <Title>
         <h1>Portifolio</h1>
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
@@ -40,7 +40,7 @@ function Portifolio() {
       <CardsList>
         {projects.map((project)=>(
           <Card BgImg={project.gif} key={project.id} >
-            <Link to={""}>
+            <a href={project.link} target="_blank"  rel="noreferrer">
                 <div>
                   <h1>{project.title}</h1>
                   <p>{project.type}</p>
@@ -48,7 +48,7 @@ function Portifolio() {
                     {project.techs.map((tech)=> findImg(tech))}
                   </span>
                 </div>
-            </Link>
+            </a>
           </Card>
         ))}
       </CardsList>

@@ -46,7 +46,7 @@ export const CardsList = styled.ul`
   width: 5px;
   } 
   ::-webkit-scrollbar-thumb {
-    background: #551a8b; 
+    background: #c17dff; 
     border-radius: 10px;
   }
 
@@ -78,7 +78,7 @@ export const Card= styled.li`
   max-height: 220px;
     
   background-image:${(props) => `url(${props.BgImg})`};
-  background-size: cover;
+  background-size: center;
 
   animation: mymove 1s infinite;
 
@@ -100,7 +100,6 @@ export const Card= styled.li`
     height: 100%;
 
     color: whitesmoke;
-    
     h1{
       font-size: 2rem;
     }

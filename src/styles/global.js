@@ -5,12 +5,25 @@ export default createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
-    outline:0;
+    outline:1;
+  }
+  html{
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch
   }
   body {
     background:#312E38;
     color:#FFF;
     -webkit-font-smoothing:antialiased;
+
+    ::-webkit-scrollbar {
+      background: rgba(0,0,0,0.3); 
+      width: 10px;
+    } 
+    ::-webkit-scrollbar-thumb {
+      background: #c8c8c8; 
+      border-radius: 10px;
+    }
   }
   input, button{
     font-family:'Roboto Slab', serif;

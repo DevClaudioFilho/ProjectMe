@@ -40,12 +40,14 @@ export const ContatosContainer = styled.div`
   width: 100%;
   flex-direction: column;
 
+
   ul{
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
     justify-content: space-evenly;
+
     li{
       display: flex;
       align-items: center;
@@ -53,8 +55,6 @@ export const ContatosContainer = styled.div`
 
       width: 70px;
       height: 70px;
-
-
       button,a{
         display: flex;
         justify-content: center;
@@ -83,8 +83,41 @@ export const ContatosContainer = styled.div`
         }
       }
     }
+
+    
+
+    .phone{ 
+      position: relative;
+      :hover{
+        ::after{ 
+          opacity: 1;
+        }
+      }
+      ::after{
+        content: "+351\-961\-358\-647";
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      
+        height: 40%;
+        width: auto;
+       
+        position: absolute;
+        right: -165%;
+        
+        font-size: 0.8rem;
+        
+        background-color: #c8c8c8;
+        color: #fff;
+        padding: 10px;
+        opacity:0;
+        transition: opacity 0.4s;
+      }
+    }
+
   }
-  
+
+
   @media screen and (min-width: 700px) {
     ul{
       width: 50%;
@@ -123,7 +156,7 @@ export const EmailForm = styled.form`
     padding: 8px;
     color: #fff;
     :focus, :hover{
-      border: solid 2px #551a8b;
+      border: solid 2px #c8c8c8;
     }
     ::placeholder{
       color: #fff;

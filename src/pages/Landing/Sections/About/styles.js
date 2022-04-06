@@ -17,6 +17,12 @@ export const Container = styled.section`
     flex-direction: column;
     height: 50vh;
   }
+  a{
+    color:#c17dff;
+    :hover{
+      color:#c98fff;
+    }
+  }
 
   @media screen and (min-width: 800px) {
     h1{

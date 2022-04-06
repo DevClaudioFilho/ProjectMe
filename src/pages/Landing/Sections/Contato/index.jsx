@@ -9,7 +9,8 @@ import {
 
 import { 
   AiOutlineWhatsApp,
-  AiOutlineMail
+  AiOutlineMail,
+  AiOutlinePhone
 } from "react-icons/ai";
 
 
@@ -18,7 +19,6 @@ function Contatos() {
   const [modalIsOpen,setModalIsOpen] = useState(false);
   useEffect(() => {
     if(modalIsOpen===true){
-      console.log("ff")
       window.scrollTo(0, document.body.scrollHeight)
     }
   },[modalIsOpen]);
@@ -31,18 +31,18 @@ function Contatos() {
       <ContatosContainer>
         <ul>
           <li className='whatsapp'>
-            <a href="https://github.com/DevClaudioFilho" target={'_blank'} rel="noreferrer">
+            <a href="https://wa.me/351961358647" target={'_blank'} rel="noreferrer" aria-label="Go to Whatsapp">
               <AiOutlineWhatsApp/>
             </a>
           </li>
           <li className='mail'>
-            <button onClick={()=>setModalIsOpen(!modalIsOpen)}>
+            <button onClick={()=>setModalIsOpen(!modalIsOpen)} aria-label="Open Form Email" type='button'>
               <AiOutlineMail/>
             </button>
           </li>
-          <li className='whatsapp'>
-            <a href="https://github.com/DevClaudioFilho" target={'_blank'} rel="noreferrer">
-              <AiOutlineWhatsApp/>
+          <li className='phone'>
+            <a href="tel:+351-961-358-647" aria-label="Tell to my number: +351-961-358-647">
+              <AiOutlinePhone/>
             </a>
           </li>
         </ul>
