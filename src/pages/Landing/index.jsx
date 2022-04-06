@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { Container} from './styles';
 
 import SocialMedia from '../../components/SocialMedia';
@@ -8,10 +8,21 @@ import Contatos from './Sections/Contato';
 
 
 function Home() {
-  
+  const [size,setSize] = useState()
+
+  useEffect(() => {
+    async function loadsize() {
+      console.log(size)
+    }
+    loadsize();
+  },[size]);
+
+  window.addEventListener('resize',function(){
+    setSize(window.innerHeight);
+  });
   return(
     <> 
-      <Container y={window.innerHeight}>
+      <Container y={size}>
         <SocialMedia/>
         <About/>
         <Portifolio/>
