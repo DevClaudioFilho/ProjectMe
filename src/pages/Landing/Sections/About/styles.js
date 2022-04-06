@@ -10,6 +10,13 @@ export const Container = styled.section`
     align-items: center;
     flex-direction: column;
   
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+  }
 
   @media screen and (min-width: 800px) {
     h1{

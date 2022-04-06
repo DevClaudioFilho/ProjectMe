@@ -43,7 +43,7 @@ export const ContatosContainer = styled.div`
   ul{
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-evenly;
     li{
@@ -54,46 +54,52 @@ export const ContatosContainer = styled.div`
       width: 70px;
       height: 70px;
 
-      border: 3px solid #000;
-
-      border-radius: 10px;
 
       button,a{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 100%;
         background-color: transparent;
-        border: none;
-      }
-      svg{
+        color: #fff;
+        border: 3px solid #fff;
+        border-radius: 10px;
+
+        svg{
         height: 50px;
         width: 50px;
-        color: #000;
-      }
-
-
-      &:hover{
         color: #fff;
-        border:3px solid #fff;
-        svg{
-        color: #fff;
-        border: #fff;
+
+        } 
+
+        &:hover{
+        color: #c8c8c8;
+        border:3px solid #c8c8c8;
+          svg{
+          color: #c8c8c8;
+          border: #c8c8c8;
+          }
         }
-
       }
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    ul{
+      width: 50%;
     }
   }
 `;
 
 export const EmailForm = styled.form`
   display: flex;
-  width: 60%;
+  width: 100%;
   max-height: 400px;
   height: 100%;
   flex-direction: column;
   margin: 20px auto;
-  padding: 10px 50px;
+  padding: 10px 20px;
   background-color: rgb(0,0,0,0.3);
   position: relative;
   ::after{
@@ -107,6 +113,9 @@ export const EmailForm = styled.form`
       top: -20px;
       right: calc(50% - 20px);
     }
+  h2{
+    margin-bottom: 25px;
+  }
   input,textarea{
     background-color: transparent;
     border: solid 2px #FFF;
@@ -150,7 +159,11 @@ export const EmailForm = styled.form`
       border: 1px solid #fff;
     }
   }
-  h2{
-    margin-bottom: 25px;
+
+
+    
+  @media screen and (min-width: 700px) {
+      width: 60%;
+      padding: 10px 50px;
   }
 `;
