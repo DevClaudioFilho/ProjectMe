@@ -78,7 +78,10 @@ export const Card= styled.li`
   max-height: 220px;
     
   background-image:${(props) => `url(${props.BgImg})`};
-  background-size: center;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 
   animation: mymove 1s infinite;
 

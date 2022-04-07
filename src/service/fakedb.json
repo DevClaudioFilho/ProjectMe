@@ -14,14 +14,16 @@
                 "title": "GrupoJomp",
                 "type": "Enterprice",
                 "techs":["NextJS","javascript","sass"],
-                "gif": "https://github.com/DevClaudioFilho/TypePokemon/blob/master/Project.gif?raw=true"
+                "gif": "/assets/GrupoJomp-HomePage.gif",
+                "link":"https://www.grupojomp.pt/"
             },
             {
                 "id": 3,
-                "title": "GrupoJomp",
-                "type": "Enterprice",
-                "techs":["NextJS","javascript","sass"],
-                "gif": ""
+                "title": "JSMinigame",
+                "type": "Fun",
+                "techs":["html","javascript","css"],
+                "gif": "https://github.com/DevClaudioFilho/JSMinigame/blob/main/JsGames.gif?raw=true",
+                "link":"https://silly-jelly-9d88b4.netlify.app/"
             }
         ]
     }

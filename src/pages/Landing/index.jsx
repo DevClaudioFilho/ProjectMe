@@ -11,10 +11,7 @@ function Home() {
   const [size,setSize] = useState(window.innerHeight)
 
   useEffect(() => {
-    async function loadsize() {
-      console.log(size)
-    }
-    loadsize();
+
   },[size]);
 
   window.addEventListener('resize',function(){

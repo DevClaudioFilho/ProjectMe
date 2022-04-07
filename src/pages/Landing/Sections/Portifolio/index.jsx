@@ -1,10 +1,9 @@
 import React, { useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 
 
 import { 
-  SiReact,SiTypescript,SiStyledcomponents,SiNextdotjs,SiSass,SiJavascript
+  SiReact,SiTypescript,SiStyledcomponents,SiNextdotjs,SiSass,SiJavascript,SiHtml5,SiCss3
 } from "react-icons/si";
 import {Title,CardsList,Card, Container} from './styles';
 function Portifolio() {
@@ -30,6 +29,9 @@ function Portifolio() {
 
     if(name.includes("Styledcomponent".toLowerCase()))return <SiStyledcomponents size={"20px"} key={name}/>
     if(name.includes("sass".toLowerCase()))return <SiSass size={"20px"} key={name}/>
+
+    if(name.includes("html".toLowerCase()))return <SiHtml5 size={"20px"} key={name}/>
+    if(name.includes("css".toLowerCase()))return <SiCss3 size={"20px"} key={name}/>
   }
   return(
   <Container id='portifolio'>

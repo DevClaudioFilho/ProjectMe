@@ -23,6 +23,7 @@ export const Body = styled.p`
   overflow: hidden;
   position: relative;
   width: var(--width);
+  text-align: center;
 
 
   ::before {
@@ -80,6 +81,7 @@ export const Title = styled.h1`
   position: relative;
   width: var(--width);
   padding-bottom: 10px;
+  text-align: center;
 
 
 
