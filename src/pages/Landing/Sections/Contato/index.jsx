@@ -49,7 +49,7 @@ function Contatos() {
         {modalIsOpen?
         (
           <EmailForm
-            action=""
+            action="mailto:info@w3docs.com"
             method="POST"
             id="sendEmail"
           >
@@ -59,15 +59,16 @@ function Contatos() {
               <input
                   type="text"
                   size="30"
-                  name="nome"
+                  id='name'
+                  name="name"
                   placeholder="Nome"
-                  form="sendEmail"
                   required
                 />
                 <input
-                  type="text"
+                  type="email"
                   size="30"
-                  name="replyto"
+                  id='email'
+                  name="email"
                   placeholder="Email"
                   form="sendEmail"
                   required
@@ -76,12 +77,12 @@ function Contatos() {
             <textarea
               type="text"
               size="35"
-              name="Comentarios"
+              name="comments"
               placeholder="Mensagem"
               form="sendEmail"
               required
             />
-            <button type="submit" name="BTEnvia" value="Enviar" text="Enviar" >
+            <button type="submit" name="submit" value="Send"  >
               Enviar
             </button>
           </EmailForm>

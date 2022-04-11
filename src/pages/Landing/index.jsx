@@ -14,8 +14,10 @@ function Home() {
 
   },[size]);
 
-  window.addEventListener('resize',function(){
+  window.addEventListener('resize',function(event){
     setSize(window.innerHeight);
+
+    return
   });
   return(
     <> 

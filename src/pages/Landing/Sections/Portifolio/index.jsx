@@ -1,23 +1,26 @@
 import React, { useState,useEffect } from 'react';
-
-
+import axios from 'axios';
 
 import { 
   SiReact,SiTypescript,SiStyledcomponents,SiNextdotjs,SiSass,SiJavascript,SiHtml5,SiCss3
 } from "react-icons/si";
+
 import {Title,CardsList,Card, Container} from './styles';
+
 function Portifolio() {
   const [projects,setProject] = useState([])
 
   useEffect(() => {
-    async function loadProjects() {
-      const getProject = await require('../../../../service/fakedb.json');
-
-      setProject(getProject.data.project);
-
+    async function loadProjects(){
+      const teste = await axios.get(`https://projectmecf.prismic.io/api/v2/documents/search?ref=YlRrVRcAACgA6Q75#format=jsonn`);
+      
+      console.log(teste.data)
+      const x = await teste.data.results;
+      return setProject(x);
     }
     loadProjects();
-  },[]);
+  }, []);
+
 
   function findImg(name) {
     name=name.toLowerCase()
@@ -39,16 +42,24 @@ function Portifolio() {
         <h1>Portifolio</h1>
         <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
       </Title>
+      {!projects.length && (
+           <CardsList>
+             <Card >
+             </Card>
+         </CardsList>
+        )}
       <CardsList>
         {projects.map((project)=>(
-          <Card BgImg={project.gif} key={project.id} >
-            <a href={project.link} target="_blank"  rel="noreferrer">
+          <Card BgImg={project.data.bgvideo.url} key={project.id} >
+            <a href={project.data.projectlink.url} target="_blank"  rel="noreferrer">
                 <div>
-                  <h1>{project.title}</h1>
-                  <p>{project.type}</p>
-                  <span>
-                    {project.techs.map((tech)=> findImg(tech))}
-                  </span>
+                  <h1>{project.data.title[0].text}</h1>
+                  <p>{project.data.type[0].text}</p>
+                  {
+                 <span>
+                    {project.data.techs.map((x)=> findImg(x.tech[0].text))}
+                  </span> 
+                  }
                 </div>
             </a>
           </Card>
