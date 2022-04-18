@@ -12,7 +12,7 @@ function Portifolio() {
 
   useEffect(() => {
     async function loadProjects(){
-      const teste = await axios.get(`https://projectmecf.prismic.io/api/v2/documents/search?ref=YlRrVRcAACgA6Q75#format=jsonn`);
+      const teste = await axios.get(`https://projectmecf.prismic.io/api/v2/documents/search?ref=Ylyb2RcAACkADWWu#format=json`);
       
       console.log(teste.data)
       const x = await teste.data.results;
