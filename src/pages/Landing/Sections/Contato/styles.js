@@ -93,17 +93,17 @@ export const ContatosContainer = styled.div`
           opacity: 1;
         }
       }
-      ::after{
+      &:after{
         content: "+351\-961\-358\-647";
         display: flex;
         justify-content: center;
         align-items:center;
       
-        height: 30%;
+        height: 20%;
         width: 100px;
        
         position: absolute;
-        bottom: -55%;
+        bottom: -50%;
         
         font-size: 0.8rem;
         
@@ -116,9 +116,8 @@ export const ContatosContainer = styled.div`
       }
       @media screen and (min-width: 700px) {
           :after{
-            right: -165%;
-            bottom: 15%;
-            width: auto;
+            right: -170%;
+            bottom: 25%;
           }
         }
     }

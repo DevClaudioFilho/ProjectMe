@@ -25,7 +25,7 @@ export default createGlobalStyle`
       border-radius: 10px;
     }
   }
-  input, button{
+  input, button, textarea{
     font-family:'Roboto Slab', serif;
     font-size:1rem;
   }

@@ -25,8 +25,8 @@ function Contatos() {
   return(
     <Container id='teste'>
       <Title>
-        <h1>Contatos</h1>
-        <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
+        <h1>Contacts</h1>
+        <p>Feel free to contact or follow any social network.</p>
       </Title>
       <ContatosContainer>
         <ul>
@@ -61,7 +61,7 @@ function Contatos() {
                   size="30"
                   id='name'
                   name="name"
-                  placeholder="Nome"
+                  placeholder="Name"
                   required
                 />
                 <input
@@ -78,12 +78,12 @@ function Contatos() {
               type="text"
               size="35"
               name="comments"
-              placeholder="Mensagem"
+              placeholder="Message"
               form="sendEmail"
               required
             />
             <button type="submit" name="submit" value="Send"  >
-              Enviar
+              Send
             </button>
           </EmailForm>
         ):null}

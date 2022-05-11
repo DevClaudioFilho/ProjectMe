@@ -39,8 +39,8 @@ function Portifolio() {
   return(
   <Container id='portifolio'>
       <Title>
-        <h1>Portifolio</h1>
-        <p>This is my steps to my destiny, my way to demostrate things alsom...</p>
+        <h1>Portfolio</h1>
+        <p>Come check some of my jobs and check yours all tech i used</p>
       </Title>
       {!projects.length && (
            <CardsList>
