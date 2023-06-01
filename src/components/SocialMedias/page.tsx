@@ -1,7 +1,7 @@
-import Icons from 'lucide-react'
+import * as Icons from 'lucide-react'
 
 function selectIcon(name: string) {
-  const Icon = Icons[name]
+  const Icon = (Icons as any)[name]
   return <Icon />
 }
 
