@@ -1,0 +1,48 @@
+.typing-animation{
+  --bgColor: #312E38;
+  --lines: 20;
+  --timePerLine: 4s;
+  --widthCh: 100%;
+  --width: calc(var(--widthCh) * 1ch);
+  --time: calc(var(--lines) * var(--timePerLine));
+
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  animation-delay:var(--delay);
+  background: var(--bgColor);  
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  text-align: center;
+}
+
+.typing-animation ::before {
+  content: "";
+  animation: 
+    type var(--timePerLine) var(--lines) forwards, 
+    carriageReturn var(--time) steps(var(--lines)) var(--lines);
+  animation-delay:var(--delay);
+  background: var(--bgColor);
+  bottom: 0;
+  height: var(--lineHeigh);
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+@keyframes grow {
+  0% { max-height: var(--lineHeight); }
+  100% { max-height: calc(var(--lineHeight) * var(--lines)); }
+}
+
+@keyframes carriageReturn {
+  0% { top: 0; }
+  100% { top: calc(var(--lineHeight) * var(--lines)); }
+}
+
+@keyframes type {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}

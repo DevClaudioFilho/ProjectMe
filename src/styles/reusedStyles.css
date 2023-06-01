@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-separator {
+  @apply border-b-4 border-solid border-[#c8c8c8] relative after:content-[''] after:absolute after:w-0 after:h-0 after:border-l-[20px] after:border-l-transparent after:border-r-[20px] after:border-r-transparent after:border-t-[20px] after:-bottom-5 after:left-1/2 after:right-1/2 file:after:border-solid after:border-[#c8c8c8] 
+}
