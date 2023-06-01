@@ -34,6 +34,7 @@ export default async function Home() {
             Come check some of my jobs and check yours all tech i used
           </p>
         </div>
+        {/* @ts-expect-error Server Component */}
         <ProjectPreview />
       </section>
       <section className="mx-auto my-0 flex h-auto max-h-[97vh] max-w-5xl flex-col gap-10 p-14 text-start">
