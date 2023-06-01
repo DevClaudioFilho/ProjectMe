@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  @apply m-0 p-0 box-border ;
+}
+html{
+  @apply scroll-smooth;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  @apply bg-[#312E38] text-white;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar {
+  @apply bg-black bg-opacity-5 w-2
+} 
+::-webkit-scrollbar-thumb {
+  @apply bg-[#c8c8c8] rounded-xl
+}
+input, button, textarea{
+  @apply text-base;
+  font-family:'Roboto Slab', serif;
+}
+h1,h2,h3,h4,h5,h6, strong{
+  @apply font-bold
+}
+button{
+  @apply cursor-pointer
+}
+li{
+  @apply list-none
+}
+a{
+  @apply decoration-transparent
+}
